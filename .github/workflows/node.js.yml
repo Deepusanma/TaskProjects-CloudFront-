@@ -31,5 +31,5 @@ jobs:
         aws-region: ap-southeast-2
 
     - name: Upload artifact to S3
-      run: aws s3 cp /home/runner/work/TaskProjects-CloudFront-/TaskProjects-CloudFront- s3://cfnpmbucket/ --recursive
+      run: aws s3 cp /home/runner/work/TaskProjects-CloudFront-/TaskProjects-CloudFront- s3://cfnpmbucket/source/
 
