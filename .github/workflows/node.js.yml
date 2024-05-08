@@ -32,3 +32,7 @@ jobs:
 
     - name: Upload artifact to S3
       run: aws s3 cp /home/runner/work/TaskProjects-CloudFront-/TaskProjects-CloudFront-/src/ s3://cfnpmbucket/source/ --recursive
+    - name: Invalidate CloudFront cache
+      run: |
+        aws cloudfront create-invalidation --distribution-id E3E9G796XCUAZD --paths "/source/*"
+
